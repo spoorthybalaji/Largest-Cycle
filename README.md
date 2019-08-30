@@ -1,7 +1,9 @@
 # Largest-Cycle
+
+
 #include <stdio.h>
 #include <stdlib.h>
-typedef struct
+typedef Lcycle
 {
     int data;
     struct node*next;
@@ -68,10 +70,10 @@ int main()
         if(deg[i]==1)
             break;
     }
-    int pos,pos1;
-    dfs(a,0,i,0,-1,&pos,deg,i);
-    dfs(a,0,pos,0,-1,&pos1,deg,pos);
-    printf("%d %d",pos,pos1);
+    int p,p1;
+    dfs(a,0,i,0,-1,&p,deg,i);
+    dfs(a,0,pos,0,-1,&p1,deg,p);
+    printf("%d %d",p,p1);
     return 0;
 }
 
